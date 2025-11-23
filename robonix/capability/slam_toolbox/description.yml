@@ -1,0 +1,11 @@
+name: "slam_toolbox"
+version: "1.0.0"
+author: "syswonder"
+start_on_boot: true
+startup_command: "bash run.sh"
+description: "The slam toolbox capability of the robot"
+params:
+  config_file:
+    required: true
+  use_sim_time:
+    default: false

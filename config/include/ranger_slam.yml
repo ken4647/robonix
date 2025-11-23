@@ -1,0 +1,29 @@
+driver:
+  - pointcloud_to_laserscan # TODO: fix this to "pointcloud"
+  - ranger_ros2
+  # - raspi_hc_sr04
+  # - realsense_ros2
+  # - static_tf
+  - mid360
+  # - unilidar_L2
+capability:
+  - ranger_description
+  - navigation2:
+      params:
+        config_file: config/nav2_params_slam.yml
+  - slam_toolbox:
+      params:
+        config_file: config/sync.param.yml
+  # - vision
+  - pointcloud
+skill:
+  - move
+  - vision
+  - semantic_map
+  - test_skill
+  - pointcloud
+brain:
+  - test_brian
+
+
+

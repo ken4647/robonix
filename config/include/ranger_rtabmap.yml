@@ -1,0 +1,17 @@
+driver:
+  - ranger_ros2
+  - mid360
+  - realsense_ros2
+capability:
+  - ranger_description
+  - navigation2:
+      params:
+        config_file: config/nav2_params_slam.yml
+  - rtabmap
+skill:
+  - test_skill
+brain:
+  - test_brian
+
+
+
