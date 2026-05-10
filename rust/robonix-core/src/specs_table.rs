@@ -19,6 +19,42 @@ pub fn load_primitives() -> HashMap<String, PrimitiveSpec> {
          { "pose": "geometry_msgs/msg/PoseStamped" },
          { "status": "std_msgs/msg/Bool" });
 
+    PRM!(primitives, "prm::description.urdf", "Get URDF description of robot",
+         {},  // No input parameters
+         {}); // TODO: define output parameters
+
+    PRM!(primitives, "prm::base.pose.cov", "",
+         {},  // No input parameters
+         {}); // TODO: define output parameters
+
+    PRM!(primitives, "prm::base.move", "Move robot base to target location",
+         {},  // No input parameters
+         {}); // TODO: define output parameters
+
+    PRM!(primitives, "prm::sensor.pointcloud", "Get point cloud from depth sensor",
+         {},  // No input parameters
+         {});
+
+    PRM!(primitives, "prm::base.navigate", "Navigate robot base to target location",
+         {},  // No input parameters
+         {});
+
+    PRM!(primitives, "prm::slam.vision", "Perform visual SLAM for environment mapping",
+         {},  // No input parameters
+         {});
+
+    PRM!(primitives, "prm::camera.rgbd", "Get RGB-D data from sensor",
+         {},  // No input parameters
+         {});
+
+    PRM!(primitives, "prm::camera.rgb", "Get RGB-D data from sensor",
+         {},  // No input parameters
+         {});
+
+    PRM!(primitives, "prm::trasform.laserscan", "transform pointcloud to laserscan",
+        {},   // No input parameters
+        {});
+    
     PRM!(primitives, "prm::gripper.close", "Close gripper",
          {},  // No input parameters
          { "status": "std_msgs/msg/Bool" });
